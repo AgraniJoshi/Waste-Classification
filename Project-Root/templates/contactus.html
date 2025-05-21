@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/c.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
+        <style>
+            .i{
+                background-image: url("{{ url_for('static', filename='images/3-1.jpg') }}");
+                background-size:cover;
+    margin: 0 auto;
+    margin:0px;
+    padding:0px;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            .container {
+                width: 80%;
+                max-width: 900px;
+                margin: 50px auto;
+                margin-top: 10px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                background: rgba(255,255,255,0.8);
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+            label {
+                margin-top: 15px;
+                font-weight: bold;
+                color: #0b4c77;
+            }
+            input, textarea, select, button {
+                margin-top: 5px;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button {
+                background-color: #05d105;
+                color: white;
+                border: none;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            button:hover {
+                background-color: #187b18;
+            }
+            .note {
+                font-size: 14px;
+                color: #555;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="i" >
+            <nav>
+                <lable class="logo"></lable><!--The systematic study and organization of everything dealing with knowing and knowledge.-->
+                <ul class="maintab" >
+                    <li><b><a href="/">Home</b></a></li>
+                    <li><b><a href="/identify">Identify</b></a></li>
+                    <li><b><a href="/aboutus">About Us</b></a></li>
+                    <li><b><a class="active" href="/contactus">Contact Us</b></a></li>
+                    <!--<li><b><a href="">Feedback</b></a></li>
+                    
+                    <li><a href="#"> <b>PET's</b> </a>
+                        <div class="menu">
+                            <ul class="mdropdown" type="none"><strong>
+                                <li><a href="dog.html"> DOG</a></li>
+                                <li><a href="cat.html"> CAT</a></li>
+                                <li><a href="bird.html"> BIRD</a></li>
+                                <li><a href="fish.html"> FISH</a></li></strong>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><b><a href="login.html" class="l">Sign In</b></a></li>
+                    -->
+                </ul>    
+            </nav>
+       
+
+        <div class="container">
+            <h1 style="text-align: center; font-size: 60px;"  class="wm">Contact Us</h1>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+    
+                <p class="note">We'll respond to your inquiry as soon as possible.</p>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
+    </body>
+    <footer>
+        <p>&copy; 2025 Waste Classification. All rights reserved.</p>
+    </footer>    
+</html>

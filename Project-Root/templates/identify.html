@@ -1,0 +1,170 @@
+<html>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/c.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <style>
+            .mainpic{
+                background-image: url("{{ url_for('static', filename='images/2.jpg') }}");
+                height:500px;             /*for setting background img*/
+    /*background-attachment: fixed;*/
+    background-size:cover;
+    margin: 0 auto;
+    margin:0px;
+    padding:0px;
+            }
+        </style>
+        <div class="mainpic">   
+            <nav>
+                <lable class="logo"></lable><!--The systematic study and organization of everything dealing with knowing and knowledge.-->
+                <ul class="maintab" >
+                    <li><b><a href="/">Home</b></a></li>
+                    <li><b><a class="active" href="/identify">Identify</b></a></li>
+                    <li><b><a href="/aboutus">About Us</b></a></li>
+                    <li><b><a href="/contactus">Contact Us</b></a></li>
+                </ul>    
+            </nav>
+        </div>
+
+<!--STYLE.CSS-->
+        <style>
+           
+            #displayimg{
+                width:650px;
+                height: 400px;
+                border: 1px solid black;
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
+            }
+
+            .chfile{
+                height:40px;
+                width: auto;
+                padding:10px;
+                font-size: 20px;
+            }
+            .identi{
+                height:50px;
+                width: 100px;
+                font-size: 19px;
+                padding:5px;
+                font-style: bold;
+                background-color: rgb(253, 140, 19);
+                border-radius: 10px;
+            }
+            .identi:hover {
+                background-color: rgb(209, 110, 3);
+            }
+            .pred{
+                align-items: center;
+                font-size: 35px;
+                font-style: bold;
+                color:rgb(3, 3, 148);
+                margin-block:20px ;
+                margin-left:20px;
+            }
+            .list{
+                align-items: left;
+                margin-left: 20px;
+                text-align: left;
+                padding-bottom: 30px;
+            }
+            ul {
+                list-style-type:none;
+            }
+        </style>
+
+
+<!--SCRIPT.JS-->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const imageInput = document.querySelector("#ImageInput");
+                let uploadImg = "";
+    
+                imageInput.addEventListener("change", function () {
+                    const reader = new FileReader();
+                    reader.addEventListener("load", () => {
+                        uploadImg = reader.result;
+                        document.querySelector("#displayimg").style.backgroundImage = `url(${uploadImg})`;
+                    });
+                    reader.readAsDataURL(this.files[0]);
+                });
+            });
+    
+            /*function identifyWaste() {
+                // This is where you'd add the code to handle the image upload, call your classification API, and display the results.
+                // For now, we'll just simulate it.
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `
+                    <h3>Classification Result:</h3>
+                    <p>Plastic Bottle</p>
+                    <h3>Related Videos and Information:</h3>
+                    <ul>
+                        <li><a href="https://www.example.com/video1" target="_blank">Video 1: Recycling Plastic Bottles</a></li>
+                        <li><a href="https://www.example.com/info1" target="_blank">Article: The Importance of Recycling Plastic</a></li>
+                    </ul>
+                `;
+            }*/
+        </script>
+    
+    </head>
+
+    <body>
+        <h1 style="text-align: center; font-size: 60px;"  class="wm">Identify Waste</h1>
+
+        <div  style="justify-content: center; align-content: center;align-items: center;display:flex;">
+            <form action="/WasteIdentify" method="POST" enctype="multipart/form-data" id="waste-form" >
+                
+                <br>
+                <br>
+                <input type="file" id="ImageInput" class="chfile" name="ImageInput" accept="image/png, image/bmp, image/jpeg, image/jpg"/>
+                <br>
+                <br>
+                <div id="displayimg"></div>
+                <br>
+                <br>
+                <button type="submit" value="submit" class="identi">Identify</button>
+            </form>
+
+        </div>
+        <!--
+        <section id="identifywaste">
+            <form id="waste-form">
+                <label for="waste-image">Upload an image of the waste:</label><br>
+                <input type="file" id="waste-image" name="waste-image" accept="image/*">
+                <button type="button" onclick="identifyWaste()">Identify</button>
+            </form>
+            <div id="result">
+                <-- The classification result and related information will be displayed here ->
+            </div>
+        </section>-->
+
+        <br>
+        <p class="pred"  style="justify-content: center; align-content: center;align-items: center;display:flex;"><b>{{pred}}</b></p><br><br>
+        {% if info %}<center>
+        <p>{{ info.info }}</p><br><br>
+        <ul class="list">
+            {% if info.points %}
+                {% for a in info.points %}
+                    <li>{{ a }}</li>
+                {% endfor %}
+            {% else %}
+                <li>No points available</li>
+            {% endif %}
+        </ul>
+        <iframe width="560" height="315" src="{{ info.video }}" frameborder="0" allowfullscreen></iframe>
+        <p style="justify-content: center; align-content: center;align-items: center;display:flex;"><a href="{{ info.link }}" target="_blank" style="justify-content: center; align-content: center;align-items: center;display:flex;">Learn more</a></p>
+            
+        <!--<p>No information available.</p>-->
+        {% endif %}
+                </center>
+
+    </body>
+
+    <footer>
+        <p>&copy; 2025 Waste Classification. All rights reserved.</p>
+    </footer>
+</html>

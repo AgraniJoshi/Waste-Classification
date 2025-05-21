@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/c.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
+    </head>
+    <body>
+        <div class="abpic">
+            <nav>
+                <lable class="logo"></lable><!--The systematic study and organization of everything dealing with knowing and knowledge.-->
+                <ul class="maintab" >
+                    <li><b><a href="/">Home</b></a></li>
+                    <li><b><a  href="/identify">Identify</b></a></li>
+                    <li><b><a class="active" href="/aboutus">About Us</b></a></li>
+                    <li><b><a href="/contactus">Contact Us</b></a></li>
+               
+                    <!--<li><b><a href="">Feedback</b></a></li>
+                    
+                    <li><a href="#"> <b>PET's</b> </a>
+                        <div class="menu">
+                            <ul class="mdropdown" type="none"><strong>
+                                <li><a href="dog.html"> DOG</a></li>
+                                <li><a href="cat.html"> CAT</a></li>
+                                <li><a href="bird.html"> BIRD</a></li>
+                                <li><a href="fish.html"> FISH</a></li></strong>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><b><a href="login.html" class="l">Sign In</b></a></li>
+                    -->
+                </ul>    
+            </nav>
+            <style>
+                .abpic{
+    background-image: url("{{ url_for('static', filename='images/3-1.jpg') }}");
+
+    /*padding:20px ;*/
+    height:600px;             /*for setting background img*/
+    /*background-attachment: fixed;*/
+    background-size:cover;
+    margin: 0 auto;
+    margin:0px;
+    padding:0px;
+}
+            </style>
+        </div>
+        <h1 style="text-align: center; font-size: 60px;"  class="wm">About Us</h1>
+        <p><div style="margin-left:40px;margin-right:40px;">
+            <br>
+            <h2 style="font-size: 35px;padding-bottom: 10px;">Our Story </h2> 
+            It all began with a vision to simplify waste management and empower communities to take charge of their environmental impact. Witnessing the growing waste crisis and the challenges people face in understanding how to dispose of waste responsibly, we set out to create a smarter, tech-driven solution.<br>Our journey started with a question: What if classifying waste could be as simple as clicking a picture? From this idea, our innovative Waste Classification Project was born.
+            <br><br>
+            <h2 style="font-size: 35px;padding-bottom: 10px;">Who We Serve</h2>  
+            Our platform is designed for everyone—from environmentally conscious individuals and households to businesses, schools, and organizations committed to sustainable practices. Whether you're looking to manage waste more efficiently at home or implement eco-friendly waste disposal practices at scale, we’re here to guide you.
+            <br><br>
+            <h2 style="font-size: 35px;padding-bottom: 10px;">How We Operate</h2>
+            We combine Innovative System with a user-friendly interface to deliver an intuitive waste classification experience. Users can upload images of their waste, and our advanced AI model identifies and classifies the waste instantly. Along with the classification results, we provide detailed information, guidelines for proper disposal, and creative ideas to help users reduce, reuse, or recycle effectively. By making waste management accessible and actionable, we enable everyone to contribute to a cleaner planet.
+            <br><br>
+            <!--<h2>The Face of Our Business</h2>
+            Behind our innovative platform is a diverse team of dedicated experts—environmentalists, AI developers, and sustainability advocates—all united by a common goal: to revolutionize waste management. We believe that every small effort makes a big difference, and we’re proud to be the driving force behind sustainable change.
+            <br>-->
+            <h2 style="font-size: 35px;padding-bottom: 10px;">Why Choose Us?</h2>
+            With our Waste Classification Project, you're not just classifying waste; you're taking an active step toward protecting the environment and embracing sustainability. Our platform saves you time, simplifies waste management, and ensures you're always informed about eco-friendly disposal practices. Together, let’s turn waste into a resource and make responsible waste management a way of life.
+            </div>
+        </p>
+        <br><br>
+    </body>
+    <footer>
+        <p>&copy; 2025 Waste Classification. All rights reserved.</p>
+    </footer>    
+</html>
