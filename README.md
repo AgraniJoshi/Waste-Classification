@@ -1,34 +1,7 @@
 # Waste-Classification
 
-The Waste Classification Project is designed to harness the power of machine learning and  
-artificial intelligence to tackle the pressing issue of waste segregation and management. 
-This project allows users to upload an image of waste, which the model then analyzes to predict 
-the type of waste. Along with the waste classification, the system provides relevant information 
-and references on how to dispose of, recycle, or repurpose the waste, highlighting the 
-importance of proper waste management. <br>
-Proper waste management is crucial for maintaining environmental sustainability. By 
-effectively classifying and managing waste, we can prevent pollution, conserve natural 
-resources, reduce greenhouse gas emissions, and protect public health. This project aims to 
-educate and empower users to make informed decisions about waste disposal, contributing to 
-a cleaner and greener planet. <br>
-The primary objective of the Waste Classification Project is to accurately identify different 
-types of waste using advanced machine learning algorithms. The model will process the 
-uploaded image and classify the waste into categories such as organic, recyclable, hazardous, 
-and others. <br>
-The project will then provide detailed information about the waste type, including its 
-environmental impact, proper disposal methods, and creative ways to repurpose it. 
-To achieve this, the project will implement several tools and technologies. The core of the 
-project is based on a Convolutional Neural Network (CNN) algorithm, which is well-suited for 
-image recognition tasks. Python, a versatile and widely-used programming language, will be 
-utilized for developing the model and integrating various components. Additionally, libraries 
-such as TensorFlow will be employed for building and training the CNN model. Other essential 
-tools include OpenCV (Open Source Computer Vision Library) from which  cv2 is the specific 
-module used in Python to interact with OpenCV. for image processing and Flask for creating a 
-user-friendly web interface. <br>
-The Waste Classification Project aims to provide an innovative solution for waste management 
-by using AI technology to classify waste and offer valuable information on disposal and 
-recycling. By raising awareness and promoting proper waste management practices, this 
-project contributes to environmental sustainability and encourages responsible behaviour. 
+The **Waste Classification Project** leverages **machine learning** to improve **waste segregation and management**. Users upload waste images, which a **CNN model** analyzes to classify into **organic, recyclable, hazardous, and others** while providing disposal and recycling guidance.<br>
+By automating waste sorting, the system helps **reduce pollution, conserve resources, and lower greenhouse gas emissions**. Built with **Python, TensorFlow, OpenCV**, and **Flask**, it ensures efficient **image recognition** and a **seamless user experience**. This project promotes **responsible waste disposal** and supports **environmental sustainability**. 
 
 ## **Problem Statement** 
 Managing waste is a big challenge because we need to sort and recycle many different types of 
