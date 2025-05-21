@@ -1,9 +1,8 @@
+Structure of Project:
 
-
-<h3>Structure of Project:</h3>
 Project Root
 │── app.py        # Main application file
-│── model.pkl     # ML model file
+│── model.pkl     # ML model file make pickel file from .ipynb
 │── templates/    # HTML files for frontend
 │   ├── main.html
 │   ├── identify.html
